@@ -1,4 +1,4 @@
-// kod testowy daftacadmy
+// kod testowy
 promiseAll([]).then(result => {
     console.log('To powinien być []:', JSON.stringify(result));
 });
