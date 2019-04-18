@@ -1,3 +1,4 @@
+// kod testowy daftacadmy
 promiseAll([]).then(result => {
     console.log('To powinien być []:', JSON.stringify(result));
 });
@@ -17,7 +18,6 @@ promiseAll([futureSuccess(1), Promise.reject('X'), futureSuccess(3)])
         console.log('To powinien być X:', error);
     });
 
-// kod testowy daftacadmy
 promiseRace([1, 2, 3]).then(result => {
     console.log('This should be 1:', result);
 });
