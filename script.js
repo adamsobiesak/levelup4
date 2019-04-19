@@ -1,5 +1,21 @@
+async function promiseAll(promises) {
+    let results = [];
+    for(let prom of promises)
+        results.push(await prom);
+    return(results);
+}
 
-
+  async function promiseRace(promises) { 
+    return new Promise((resolve, reject)=>{
+      for (let prom of promises) {
+        if (prom.then) {
+          prom.then(resolve, reject);
+        } else {
+          return resolve(prom);
+        }
+      }
+    });
+  }    
 // kod testowy
 promiseAll([]).then(result => {
     console.log('To powinien być []:', JSON.stringify(result));
