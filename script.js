@@ -1,10 +1,9 @@
 async function promiseAll(promises) {
     let results = [];
-    for(let prom of promises)
+     for(let prom of promises)
         results.push(await prom);
-    return(results);
+         return(results);
 }
-
   async function promiseRace(promises) { 
     return new Promise((resolve, reject)=>{
       for (let prom of promises) {
